@@ -62,29 +62,29 @@ RUN curl -LO ${CURL_OPTIONS} \
 #
 # http://www.cvedetails.com/vulnerability-list/vendor_id-1367/product_id-2387/version_id-192973/Drupal-Drupal-7.42.html
 #
-RUN curl -LO ${CURL_OPTIONS} \
-      https://ftp.drupal.org/files/projects/drupal-7.42.tar.gz && \
-    tar zxf drupal-7.42.tar.gz && \
-    mkdir /opt/drupal && \
-    cd drupal-7.42 && \
-    cp -R . /opt/drupal && \
-    cd - && \
-    rm -rf drupal-7.42 && \
-    rm -f *.tar.gz
+#RUN curl -LO ${CURL_OPTIONS} \
+#      https://ftp.drupal.org/files/projects/drupal-7.42.tar.gz && \
+#    tar zxf drupal-7.42.tar.gz && \
+#    mkdir /opt/drupal && \
+#    cd drupal-7.42 && \
+#    cp -R . /opt/drupal && \
+#    cd - && \
+#    rm -rf drupal-7.42 && \
+#    rm -f *.tar.gz
 
 # tomcat - Java application (manual install)
 #
 # https://www.cvedetails.com/cve/CVE-2016-3092/
 #
-RUN curl -LO ${CURL_OPTIONS} \
-      http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.69/bin/apache-tomcat-7.0.69.tar.gz && \
-    tar zxf apache-tomcat-7.0.69.tar.gz && \
-    mkdir /opt/tomcat && \
-    cd apache-tomcat-7.0.69 && \
-    cp -R . /opt/tomcat && \
-    cd - && \
-    rm -rf apache-tomcat-7.0.69 && \
-    rm -f *.tar.gz
+#RUN curl -LO ${CURL_OPTIONS} \
+#      http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.69/bin/apache-tomcat-7.0.69.tar.gz && \
+#    tar zxf apache-tomcat-7.0.69.tar.gz && \
+#    mkdir /opt/tomcat && \
+#    cd apache-tomcat-7.0.69 && \
+#    cp -R . /opt/tomcat && \
+#    cd - && \
+#    rm -rf apache-tomcat-7.0.69 && \
+#    rm -f *.tar.gz
 
 # OpenJDK - Java (RPM install)
 #

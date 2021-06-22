@@ -31,16 +31,16 @@ RUN curl -LO ${CURL_OPTIONS} \
 #
 # https://www.cvedetails.com/cve/CVE-2014-4877/
 #
-RUN curl -LO ${CURL_OPTIONS} \
-      http://www.mirrorservice.org/sites/ftp.gnu.org/gnu/wget/wget-1.15.tar.gz && \
-    tar zxf wget-1.15.tar.gz && \
-    cd wget-1.15 && \
-    ./configure --prefix=/opt/wget && \
-    make && \
-    make install && \
-    cd .. && \
-    rm -rf wget-1.15 && \
-    rm *.tar.gz
+#RUN curl -LO ${CURL_OPTIONS} \
+#      http://www.mirrorservice.org/sites/ftp.gnu.org/gnu/wget/wget-1.15.tar.gz && \
+#    tar zxf wget-1.15.tar.gz && \
+#    cd wget-1.15 && \
+#    ./configure --prefix=/opt/wget && \
+#    make && \
+#    make install && \
+#    cd .. && \
+#    rm -rf wget-1.15 && \
+#    rm *.tar.gz
 
 # p7zip - command line utility (manual install)
 #
@@ -120,15 +120,15 @@ RUN curl -LO ${CURL_OPTIONS} \
 #
 # https://www.cvedetails.com/cve/CVE-2016-6581/
 #
-RUN curl -LO ${CURL_OPTIONS} \
-          https://pypi.python.org/packages/8c/2b/e6e2f554368785c7eb68d618fd6457625be1535e807f6abf11c7db710f34/hpack-2.1.1.tar.gz && \
-        tar xvf hpack-2.1.1.tar.gz && \
-        mkdir /opt/hpack && \
-        cd hpack-2.1.1 && \
-        cp -R . /opt/hpack && \
-        cd - && \
-        rm -rf hpack-2.1.1 && \
-        rm -f *.tar.gz
+#RUN curl -LO ${CURL_OPTIONS} \
+#          https://pypi.python.org/packages/8c/2b/e6e2f554368785c7eb68d618fd6457625be1535e807f6abf11c7db710f34/hpack-2.1.1.tar.gz && \
+#        tar xvf hpack-2.1.1.tar.gz && \
+#        mkdir /opt/hpack && \
+#        cd hpack-2.1.1 && \
+#        cp -R . /opt/hpack && \
+#        cd - && \
+#        rm -rf hpack-2.1.1 && \
+#        rm -f *.tar.gz
 
 # commons-beanutils-1.8 - Jar file  
 #

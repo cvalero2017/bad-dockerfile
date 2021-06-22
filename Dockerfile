@@ -134,8 +134,8 @@ RUN curl -LO ${CURL_OPTIONS} \
 #
 # https://www.cvedetails.com/cve/CVE-2014-0114/
 #
-RUN curl -LO ${CURL_OPTIONS} \
-      http://repo1.maven.org/maven2/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0-sources.jar
+#RUN curl -LO ${CURL_OPTIONS} \
+      #http://repo1.maven.org/maven2/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0-sources.jar
 
 # activesupport 4.2.1 - GEM package (Ruby)
 #
@@ -153,30 +153,30 @@ COPY utils.js /tmp/utils.js
 #
 # https://www.cvedetails.com/vulnerability-list/vendor_id-12113/product_id-30764/version_id-192848/Nodejs-Node.js-0.10.41.html
 #
-RUN curl -LO ${CURL_OPTIONS} \
-      https://nodejs.org/dist/v0.10.41/node-v0.10.41-linux-x64.tar.gz && \
-    tar zxf node-v0.10.41-linux-x64.tar.gz && \
-    mkdir /opt/nodejs && \
-    cd node-v0.10.41-linux-x64 && \
-    cp -R . /opt/nodejs && \
-    cd - && \
-    rm -rf node-v0.10.41-linux-x64 && \
-    rm -rf *.tar.gz
+#RUN curl -LO ${CURL_OPTIONS} \
+#      https://nodejs.org/dist/v0.10.41/node-v0.10.41-linux-x64.tar.gz && \
+##    tar zxf node-v0.10.41-linux-x64.tar.gz && \
+ #   mkdir /opt/nodejs && \
+ #   cd node-v0.10.41-linux-x64 && \
+ #   cp -R . /opt/nodejs && \
+ #   cd - && \
+ #   rm -rf node-v0.10.41-linux-x64 && \
+ #   rm -rf *.tar.gz
 
 # bash - command line utility (installed manually)
 #
 # https://www.cvedetails.com/vulnerability-list/vendor_id-72/product_id-21050/version_id-172000/GNU-Bash-4.3.html
 #
-RUN curl -LO ${CURL_OPTIONS} \
-      https://ftp.heanet.ie/mirrors/gnu/bash/bash-4.3.tar.gz && \
-    tar zxf bash-4.3.tar.gz && \
-    mkdir /opt/bash && cd bash-4.3 && \
-    ./configure --prefix=/opt/bash && \
-    make && \
-    make install && \
-    cd .. && \
-    rm -rf bash-4.3 && \
-    rm -rf *.tar.gz
+#RUN curl -LO ${CURL_OPTIONS} \
+#      https://ftp.heanet.ie/mirrors/gnu/bash/bash-4.3.tar.gz && \
+#    tar zxf bash-4.3.tar.gz && \
+#    mkdir /opt/bash && cd bash-4.3 && \
+#    ./configure --prefix=/opt/bash && \
+#    make && \
+#    make install && \
+#    cd .. && \
+#    rm -rf bash-4.3 && \
+#    rm -rf *.tar.gz
 
 # rpmsquirt
 #
